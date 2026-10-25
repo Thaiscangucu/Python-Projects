@@ -1,8 +1,14 @@
-import requests 
+import os
+import sys
+import requests
 from datetime import datetime
 
 USERNAME = "thaiscangucu"
-TOKEN = "jbfjjtmds124"
+# O token do Pixela não fica no código: ele é lido da variável de ambiente PIXELA_TOKEN.
+# No Terminal, antes de rodar: export PIXELA_TOKEN="seu_token_aqui"
+TOKEN = os.environ.get("PIXELA_TOKEN")
+if not TOKEN:
+    sys.exit("Defina a variável de ambiente PIXELA_TOKEN antes de rodar. Exemplo: export PIXELA_TOKEN=\"seu_token\"")
 GRAPH_ID = "graph2"
 GRAPH_URL = "https://pixe.la/v1/users/thaiscangucu/graphs/graph2.html"
 

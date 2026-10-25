@@ -11,3 +11,14 @@ This project requires an internet connection to communicate with the Pixela API.
 * Requests library installed:
   ```bash
   pip install requests
+  ```
+
+### Setting Up Your Pixela Token
+The Pixela token is **not** stored in the code. Set it as an environment variable before running the script:
+
+```bash
+export PIXELA_TOKEN="your_token_here"
+python3 main.py
+```
+
+If the variable is missing, the script stops and tells you to set it.
